@@ -17,6 +17,7 @@ import javax.annotation.Resource;
 public class ListSongController {
     /**
      * 服务对象
+     * 王昊晚上去洗澡
      */
     @Resource
     private ListSongService listSongService;
