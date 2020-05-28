@@ -76,4 +76,9 @@ public class SongServiceImpl implements SongService {
     public boolean deleteById(Object id) {
         return this.songDao.deleteById(id) > 0;
     }
+
+    @Override
+    public List<Song> findSongByLike(String name) {
+        return this.songDao.findSongByLike(name);
+    }
 }

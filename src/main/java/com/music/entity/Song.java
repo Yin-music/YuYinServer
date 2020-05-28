@@ -1,5 +1,7 @@
 package com.music.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -9,6 +11,7 @@ import java.io.Serializable;
  * @author makejava
  * @since 2020-05-25 11:24:38
  */
+@Data
 public class Song implements Serializable {
     private static final long serialVersionUID = -81941096854317422L;
     
@@ -31,78 +34,5 @@ public class Song implements Serializable {
     private String lyric;
     
     private String url;
-
-
-    public Object getId() {
-        return id;
-    }
-
-    public void setId(Object id) {
-        this.id = id;
-    }
-
-    public Object getSingerId() {
-        return singerId;
-    }
-
-    public void setSingerId(Object singerId) {
-        this.singerId = singerId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIntroduction() {
-        return introduction;
-    }
-
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public String getPic() {
-        return pic;
-    }
-
-    public void setPic(String pic) {
-        this.pic = pic;
-    }
-
-    public String getLyric() {
-        return lyric;
-    }
-
-    public void setLyric(String lyric) {
-        this.lyric = lyric;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
 }

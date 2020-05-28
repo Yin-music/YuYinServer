@@ -3,9 +3,13 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://47.113.122.187:3306/linger_music
+    url: jdbc:mysql://47.113.122.187:3306/linger_music?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
+  data:
+    solr:
+      http://localhost:8080/solr-4.10.3
+
 mybatis:
   type-aliases-package: com.entity
   mapper-locations: classpath:mapper/*Dao.xml

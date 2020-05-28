@@ -15,7 +15,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("songList")
-@CrossOrigin
 public class SongListController {
     /**
      * 服务对象
@@ -50,4 +49,5 @@ public class SongListController {
         System.out.println(style);
         return songListService.findByStyle(style);
     }
+
 }

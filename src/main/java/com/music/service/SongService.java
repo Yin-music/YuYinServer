@@ -52,4 +52,10 @@ public interface SongService {
      */
     boolean deleteById(Object id);
 
+    /**
+     * 模糊查询
+     * @param name
+     * @return
+     */
+    List<Song> findSongByLike(String name);
 }
