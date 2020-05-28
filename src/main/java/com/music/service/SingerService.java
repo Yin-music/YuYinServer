@@ -52,4 +52,7 @@ public interface SingerService {
      */
     boolean deleteById(Object id);
 
+    List<Singer> findSingerAll();
+
+    List<Singer> findSingerBySex(Integer sex);
 }

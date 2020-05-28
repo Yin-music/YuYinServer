@@ -76,4 +76,14 @@ public class SingerServiceImpl implements SingerService {
     public boolean deleteById(Object id) {
         return this.singerDao.deleteById(id) > 0;
     }
+
+    @Override
+    public List<Singer> findSingerAll() {
+        return this.singerDao.findSingerAll();
+    }
+
+    @Override
+    public List<Singer> findSingerBySex(Integer sex) {
+        return this.singerDao.findSingerBySex(sex);
+    }
 }

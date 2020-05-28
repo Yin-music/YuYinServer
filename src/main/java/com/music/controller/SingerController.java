@@ -5,6 +5,7 @@ import com.music.service.SingerService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Singer)表控制层
@@ -32,4 +33,16 @@ public class SingerController {
         return this.singerService.queryById(id);
     }
 
+    //查询所有歌手
+    @GetMapping("findSingerAll")
+    public List<Singer> findSingerAll(){
+        System.out.println("查询歌手的请求");
+        return this.singerService.findSingerAll();
+    }
+
+    //按性别查询所有歌手
+    @GetMapping("findSingerBySex/{sex}")
+    public List<Singer> findSingerBySex(@PathVariable Integer sex){
+        return this.singerService.findSingerBySex(sex);
+    }
 }

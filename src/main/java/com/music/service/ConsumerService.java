@@ -1,6 +1,8 @@
 package com.music.service;
 
 import com.music.entity.Consumer;
+import com.music.pojo.MyCoolect;
+
 import java.util.List;
 
 /**
@@ -51,5 +53,7 @@ public interface ConsumerService {
      * @return 是否成功
      */
     boolean deleteById(Object id);
+
+    List<MyCoolect> findCollectById(Integer id);
 
 }

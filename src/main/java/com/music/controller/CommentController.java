@@ -28,7 +28,8 @@ public class CommentController {
      * @return 单条数据
      */
     @GetMapping("selectOne")
-    public Comment selectOne(Integer id) {
+    public Comment selectOne( Integer id) {
+
         return this.commentService.queryById(id);
     }
 

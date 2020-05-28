@@ -1,6 +1,7 @@
 package com.music.dao;
 
 import com.music.entity.Consumer;
+import com.music.pojo.MyCoolect;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
@@ -63,5 +64,14 @@ public interface ConsumerDao {
      * @return 影响行数
      */
     int deleteById(Object id);
+
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public List<MyCoolect> findCollectById(Integer id);
+
 
 }

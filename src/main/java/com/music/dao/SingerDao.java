@@ -64,4 +64,8 @@ public interface SingerDao {
      */
     int deleteById(Object id);
 
+    //查询所有歌手
+    List<Singer> findSingerAll();
+    //按性别查询所有歌手
+    List<Singer> findSingerBySex(Integer sex);
 }

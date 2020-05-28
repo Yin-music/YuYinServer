@@ -2,10 +2,17 @@ package com.music.service.impl;
 
 import com.music.entity.Consumer;
 import com.music.dao.ConsumerDao;
+import com.music.pojo.MyCoolect;
 import com.music.service.ConsumerService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +34,27 @@ public class ConsumerServiceImpl implements ConsumerService {
      */
     @Override
     public Consumer queryById(Object id) {
+        /*SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar instance = Calendar.getInstance();
+        instance.setTime();*/
+        //this.consumerDao.queryById(id);
+        /*Consumer consumer = this.consumerDao.queryById(id);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date birth = consumer.getBirth();
+        String format = simpleDateFormat.format(birth);
+        System.out.println("------"+format+"----------");
+        try {
+            Date parse = simpleDateFormat.parse(format);
+            consumer.setBirth(parse);
+            System.out.println("------"+parse+"----------");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        ParsePosition parsePosition = new ParsePosition(0);
+        Date parse = simpleDateFormat.parse(format, parsePosition);
+
+        DateFormat.getInstance(DateFoemat.SHTP,cji);
+        return consumer;*/
         return this.consumerDao.queryById(id);
     }
 
@@ -75,5 +103,11 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Override
     public boolean deleteById(Object id) {
         return this.consumerDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public List<MyCoolect> findCollectById(Integer id) {
+        return this.consumerDao.findCollectById(id);
+
     }
 }
